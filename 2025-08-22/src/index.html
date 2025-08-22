@@ -3,44 +3,229 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" type="text/css" href="styles/style.css" />
-  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="styles/card.css" />
+  <title>eShop</title>
   
 </head>
 <body>
-  <header>
-    <nav class="flex justify-between py-16 px-24">
-      <div>
-        <ul class="flex gap-8">
-          <li class="text-mdegray">logo</li>
-          <li class="text-mdegray">Showcase</li>
-          <li class="text-mdegray">Docs</li>
-          <li class="text-mdegray">Blog</li>
-          <li class="text-mdegray">Templates</li>
-          <li class="text-mdegray">Enterprise</li>
+  <div class="topbar">
+    <div class="container flex justify-between align-center">
+      <p class="topbar-text">Welcome To Our Store</p>
+      <div class="topbar-right flex gap-16 align-center">
+        <span><i class="fa-solid fa-phone"></i> Call Us: 599 - 90 - 90 - 90</span>
+        <span><i class="fa-solid fa-language"></i> English</span>
+        <span>GEL</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container flex justify-between r py-20">
+      <div class="logo">
+        <span class="logo-box"></span>
+        <span class="logo-text">eShop</span>
+      </div>
+      <nav class="main-nav">
+        <ul class="flex gap-24 ">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Collection</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Seller</a></li>
         </ul>
+      </nav>
+      <div class="actions flex gap-16">
+        <a aria-label="search" href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a aria-label="wishlist" href="#" class="icon-link"><i class="fa-regular fa-heart"></i></a>
+        <a aria-label="cart" href="#" class="icon-link"><i class="fa-solid fa-bag-shopping"></i></a>
+        <a aria-label="account" href="#" class="icon-link"><i class="fa-regular fa-user"></i></a>
       </div>
-      <div class="flex gap-4">
-        <input placeholder="search documentation" class="base-input p-4" />
-        <button class="btn-primary p-6"><p>Deploy</p></button>
-        <button class="btn-secondary p-6">Learn</button>
-      </div>
-    </nav>
+    </div>
   </header>
 
   <main>
-    <div class="container my-80">
-      <h1 class="text-white text-2xl text-center">The React Framework for the Web</h1>
-      <p class="text-mdegray text-m text-center mt-20">
-        Used by some of the world's largest companies, Next.js enables you to create 
-        <span class="text-white">high- <br> quality web applications</span> with the power of React components.
-      </p>
-      <div class="mt-20 flex gap-4 justify-center">
-        <button class="btn-primary p-8"><p class="px-6 text-m">Get Started</p></button>
-        <button class="btn-secondary p-8"><p class="px-6 text-m">Learn Next.js</p></button>
+    <section class="slider">
+      <div class="container slider-inner">
+        <div class="slider-content">
+          <div class="badge">#1 Product</div>
+          <h1>Chandeliers, Wall Lights & Furniture — All in One Place</h1>
+          <p>Discover modern lighting and interiors—chandeliers, wall lights, and furniture. Quality, style, and great prices for your space.</p>
+          <button class="cta-btn">Shop Now <span class="arrow">→</span></button>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="promo-grid container">
+      <a class="promo-card promo-big" href="#">
+        <img src="https://i.pinimg.com/1200x/55/72/bb/5572bb45b981fe6f4e97b0230f896835.jpg" alt="Modern chandelier" />
+        <div class="promo-overlay center">
+          <div class="promo-caption white">
+            <span class="promo-label">Save up to 30% off</span>
+            <h3 class="promo-title">Modern Chandeliers</h3>
+          </div>
+        </div>
+      </a>
+
+      <a class="promo-card promo-s1" href="#">
+        <img src="https://i.pinimg.com/1200x/a0/18/a6/a018a6211b417b543a6cdf323bbb18d4.jpg" alt="Wall sconce" />
+        <div class="promo-overlay">
+          <span class="promo-meta">Weekend Offer</span>
+          <h4 class="promo-small-title">Wall Lights</h4>
+        </div>
+      </a>
+
+      <a class="promo-card promo-s2" href="#">
+        <img src="https://i.pinimg.com/736x/99/6a/88/996a8892e900328f2390b88e2d034e0d.jpg" alt="Floor lamp" />
+        <div class="promo-overlay">
+          <span class="promo-meta">Special Offer</span>
+          <h4 class="promo-small-title">Floor Lamps</h4>
+        </div>
+      </a>
+
+      <a class="promo-card promo-s3" href="#">
+        <img src="https://i.pinimg.com/736x/a8/10/99/a81099474c837d6a4ae21eded23a78ae.jpg" alt="Furniture" />
+        <div class="promo-overlay">
+          <span class="promo-meta">Limited Offer</span>
+          <h4 class="promo-small-title">Furniture</h4>
+        </div>
+      </a>
+
+      <a class="promo-card promo-w1" href="#">
+        <img src="https://media.loaf.com/image/upload/c_crop,h_857,w_1200,x_0,y_43/f_auto/q_auto/c_fill,h_786,w_1100/website/images/original/575386-mixed-lamp-range-069-lighton-cropped.jpg" alt="Table lamp" />
+        <div class="promo-overlay">
+          <span class="promo-meta">Save up to <b>40% off</b></span>
+          <h3 class="promo-title">Table Lamps</h3>
+          <button class="mini-btn">Shop Now <span class="arrow">→</span></button>
+        </div>
+      </a>
+
+      <a class="promo-card promo-w2" href="#">
+        <img src="https://i.pinimg.com/736x/5f/19/7a/5f197a0aaf3b2133d4bde74180dc1623.jpg" alt="Pendant light" />
+        <div class="promo-overlay">
+          <span class="promo-meta">Save up to <b>25% off</b></span>
+          <h3 class="promo-title">Pendant Lights</h3>
+          <button class="mini-btn">Shop Now <span class="arrow">→</span></button>
+        </div>
+      </a>
+    </section>
   </main>
+  
+
+
+  <section class="container products-section">
+    <div class="products-header">
+      <div class="section-eyebrow">Recent Story</div>
+      <h2 class="section-title">Trending Products</h2>
+    </div>
+    <div class="products-grid">
+      
+      <article class="product-card">
+        <div class="product-media">
+          <img src="https://i.pinimg.com/736x/4f/f5/2c/4ff52cb68581d7b0443fa66012504117.jpg" alt="Portable Light">
+          <span class="discount-badge">20%</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Portable Light</h3>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="count">(0)</span>
+          </div>
+          <div class="price-row">
+            <span class="price">$22.50</span>
+            <span class="old-price">$25.00</span>
+          </div>
+        </div>
+        <div class="product-actions">
+          <button class="add-to-cart">Add to cart</button>
+        </div>
+      </article>
+
+      
+      <article class="product-card">
+        <div class="product-media">
+          <img src="https://i.pinimg.com/736x/91/c4/a2/91c4a2e80dc2385dedea1b2e107b6485.jpg" alt="Furniture">
+          <span class="discount-badge">50%</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Furniture</h3>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="count">(0)</span>
+          </div>
+          <div class="price-row">
+            <span class="price">$9.80</span>
+            <span class="old-price">$10.00</span>
+          </div>
+        </div>
+        <div class="product-actions">
+          <button class="add-to-cart">Add to cart</button>
+        </div>
+      </article>
+
+      
+      <article class="product-card">
+        <div class="product-media">
+          <img src="https://i.pinimg.com/1200x/a6/a4/7a/a6a47a6ee61e26e187f3be51fcc4a9a8.jpg" alt="Floor Light">
+          <span class="discount-badge">30%</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Floor Light</h3>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="count">(0)</span>
+          </div>
+          <div class="price-row">
+            <span class="price">$5.94</span>
+            <span class="old-price">$6.00</span>
+          </div>
+        </div>
+        <div class="product-actions">
+          <button class="add-to-cart">Add to cart</button>
+        </div>
+      </article>
+
+      
+      <article class="product-card">
+        <div class="product-media">
+          <img src="https://i.pinimg.com/736x/21/59/90/215990502cd2df6123935f1ad7ad4caa.jpg" alt="Chandelier">
+          <span class="discount-badge">15%</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">Chandelier</h3>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="count">(0)</span>
+          </div>
+          <div class="price-row">
+            <span class="price">$12.75</span>
+            <span class="old-price">$15.00</span>
+          </div>
+        </div>
+        <div class="product-actions">
+          <button class="add-to-cart">Add to cart</button>
+        </div>
+      </article>
+    </div>
+  </section>
 </body>
 </html>
 
