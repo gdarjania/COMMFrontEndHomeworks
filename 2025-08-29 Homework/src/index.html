@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#101010] font-poppins">
+    <div class="grid [grid-template-columns:360px_1fr] w-screen h-screen p-5 gap-5">
+        
+        <div class="p-8 text-white flex flex-col">
+            <div class="mb-12">
+                <div class="relative w-20 h-20 mb-4">
+                    <img src="images/samantha.svg" alt="Samantha's profile picture" class="w-full h-full rounded-2xl object-cover">
+                    <span class="absolute -top-1 -right-1 bg-[#DC3434] text-white w-6 h-6 rounded-full flex justify-center items-center text-xs font-semibold border-2 border-[#101010]">4</span>
+                </div>
+                <h2 class="text-3xl font-semibold mb-1">Samantha</h2>
+                <p class="text-base text-white/60">samantha@email.com</p>
+            </div>
+            <nav>
+                <ul class="list-none space-y-4">
+                    <li><a href="#" class="text-2xl text-white/50 no-underline font-semibold block py-2 rounded-lg hover:text-white">Dashboard</a></li>
+                    <li><a href="#" class="text-2xl text-white no-underline font-semibold block py-2 rounded-lg">Expenses</a></li>
+                    <li><a href="#" class="text-2xl text-white/50 no-underline font-semibold block py-2 rounded-lg hover:text-white">Wallets</a></li>
+                    <li><a href="#" class="text-2xl text-white/50 no-underline font-semibold block py-2 rounded-lg hover:text-white">Summary</a></li>
+                    <li><a href="#" class="text-2xl text-white/50 no-underline font-semibold block py-2 rounded-lg hover:text-white">Accounts</a></li>
+                    <li><a href="#" class="text-2xl text-white/50 no-underline font-semibold block py-2 rounded-lg hover:text-white">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="grid [grid-template-columns:1fr_350px] rounded-3xl overflow-hidden">
+            <main class="flex flex-col bg-white p-10">
+                <header class="flex justify-between items-center mb-8">
+                    <div>
+                        <h1 class="text-4xl font-bold text-[#262A41]">Expenses</h1>
+                        <p class="text-[#101010]/50 text-base">01 - 25 March, 2020</p>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop" alt="User 1" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop" alt="User 2" class="-ml-3 w-10 h-10 rounded-full border-2 border-white object-cover">
+                        <div class="-ml-3 w-10 h-10 rounded-full border-2 border-[#D2DCE8] bg-white text-[#D2DCE8] flex items-center justify-center font-semibold text-lg">+</div>
+                    </div>
+                </header>
+
+                <section class="mb-8">
+                    <div class="flex justify-between items-end h-[100px]">
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[40%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[60%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[30%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[70%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[50%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[80%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[45%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[65%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[55%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[35%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[75%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[25%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[60%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[40%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[85%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[50%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[60%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF] rounded-md h-[95%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[70%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[40%]"></div>
+                        <div class="w-[3.5%] bg-[#157AFF]/20 rounded-md h-[55%]"></div>
+                    </div>
+                </section>
+
+                <section class="space-y-6">
+                    <div class="border-b border-gray-200 pb-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-lg font-semibold text-[#262A41]">Today</h3>
+                            <button class="text-gray-400 font-bold tracking-widest">...</button>
+                        </div>
+                        <ul class="list-none space-y-4">
+                            <li class="flex justify-between items-center">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center bg-[#32A7E2]">
+                                        <i class="fas fa-shopping-cart text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-base text-[#273240]">Grocery</p>
+                                        <p class="text-sm text-[#404852]/50">5:12 pm • Belanja di pasar</p>
+                                    </div>
+                                </div>
+                                <p class="font-semibold text-base text-[#273240]">-326.800</p>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center bg-[#B548C6]">
+                                        <i class="fas fa-bus text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-base text-[#273240]">Transportation</p>
+                                        <p class="text-sm text-[#404852]/50">5:12 pm • Naik bus umum</p>
+                                    </div>
+                                </div>
+                                <p class="font-semibold text-base text-[#273240]">-15.000</p>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center bg-[#FF8700]">
+                                        <i class="fas fa-home text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-base text-[#273240]">Housing</p>
+                                        <p class="text-sm text-[#404852]/50">5:12 pm • Bayar Listrik</p>
+                                    </div>
+                                </div>
+                                <p class="font-semibold text-base text-[#273240]">-185.750</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-lg font-semibold text-[#262A41]">Monday, 23 March 2020</h3>
+                            <button class="text-gray-400 font-bold tracking-widest">...</button>
+                        </div>
+                        <ul class="list-none space-y-4">
+                            <li class="flex justify-between items-center">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center bg-[#DC3434]">
+                                        <i class="fas fa-utensils text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-base text-[#273240]">Food and Drink</p>
+                                        <p class="text-sm text-[#404852]/50">5:12 pm • Makan Steak</p>
+                                    </div>
+                                </div>
+                                <p class="font-semibold text-base text-[#273240]">-156.000</p>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full flex items-center justify-center bg-[#4BA83D]">
+                                        <i class="fas fa-film text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-base text-[#273240]">Entertainment</p>
+                                        <p class="text-sm text-[#404852]/50">5:12 pm • Nonton Bioskop</p>
+                                    </div>
+                                </div>
+                                <p class="font-semibold text-base text-[#273240]">-35.200</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+    
+            <aside class="bg-[#F9FAFC] relative">
+                <div class="absolute" style="top: 96px; left: 50px;">
+                    <h3 class="text-xl font-semibold mb-6 text-[#262A41]">Where your money go?</h3>
+                    <ul class="list-none space-y-5 w-[250px]">
+                        <li>
+                            <div class="flex justify-between mb-2 text-sm font-medium text-[#273240]">
+                                <p>Food and Drinks</p>
+                                <p>872.400</p>
+                            </div>
+                            <div class="w-full h-2 bg-[#ECEFF5] rounded-full overflow-hidden"><div class="h-full bg-[#31BA96]" style="width: 70%"></div></div>
+                        </li>
+                        <li>
+                            <div class="flex justify-between mb-2 text-sm font-medium text-[#273240]">
+                                <p>Shopping</p>
+                                <p>1.378.200</p>
+                            </div>
+                            <div class="w-full h-2 bg-[#ECEFF5] rounded-full overflow-hidden"><div class="h-full bg-[#31BA96]" style="width: 85%"></div></div>
+                        </li>
+                        <li>
+                            <div class="flex justify-between mb-2 text-sm font-medium text-[#273240]">
+                                <p>Housing</p>
+                                <p>928.500</p>
+                            </div>
+                            <div class="w-full h-2 bg-[#ECEFF5] rounded-full overflow-hidden"><div class="h-full bg-[#31BA96]" style="width: 75%"></div></div>
+                        </li>
+                        <li>
+                            <div class="flex justify-between mb-2 text-sm font-medium text-[#273240]">
+                                <p>Transportation</p>
+                                <p>420.700</p>
+                            </div>
+                            <div class="w-full h-2 bg-[#ECEFF5] rounded-full overflow-hidden"><div class="h-full bg-[#31BA96]" style="width: 40%"></div></div>
+                        </li>
+                        <li>
+                            <div class="flex justify-between mb-2 text-sm font-medium text-[#273240]">
+                                <p>Vehicle</p>
+                                <p>520.000</p>
+                            </div>
+                            <div class="w-full h-2 bg-[#ECEFF5] rounded-full overflow-hidden"><div class="h-full bg-[#31BA96]" style="width: 55%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#EDF0F6] rounded-2xl p-6 text-center w-[250px] h-[292px] absolute" style="top: 528px; left: 50px;">
+                    <div class=" w-full h-full">
+                        <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-[200px] h-[100px]">
+                            <img src="images/boxes.svg" alt="Boxes illustration" class="absolute bottom-0 left-0 z-10">
+                            <img src="images/flowers.svg" alt="Flowers illustration" class="absolute bottom-0 right-0">
+                        </div>
+                        <div class="flex flex-col items-center justify-end h-full pb-4">
+                            <h4 class="text-base font-semibold mb-2 text-[#273240]">Save more money</h4>
+                            <p class="text-xs text-[#404852]/70 leading-relaxed mb-6">eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                            <button class="bg-[#101010] text-white border-0 px-8 py-3 rounded-2xl font-semibold tracking-wider hover:bg-black">VIEW TIPS</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
