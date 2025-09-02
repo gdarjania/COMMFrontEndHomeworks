@@ -1,0 +1,108 @@
+/* ძირითადი სტილები გვერდის ცენტრირებისთვის */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* საათის კონტეინერი */
+.clock {
+    width: 250px; /* გავზარდოთ ზომა, რომ ციფრები კარგად გამოჩნდეს */
+    height: 250px;
+    border: 7px solid #333;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* ისრების ზოგადი სტილი */
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    background-color: #333;
+    border-radius: 5px;
+    z-index: 5; /* დავამატოთ z-index, რომ ისრები ციფრებზე მაღლა იყოს */
+}
+
+/* საათის ისარი */
+.hour-hand {
+    width: 8px;
+    height: 55px;
+    background-color: #222;
+    animation: rotate 43200s linear infinite;
+}
+
+/* წუთების ისარი */
+.minute-hand {
+    width: 5px;
+    height: 80px;
+    background-color: #444;
+    animation: rotate 3600s linear infinite;
+}
+
+/* წამების ისარი */
+.second-hand {
+    width: 2px;
+    height: 100px;
+    background-color: #ff0000;
+    animation: rotate 60s steps(60, end) infinite;
+}
+
+/* ცენტრალური წერტილი */
+.center-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: #333;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* --------- ახალი სტილები ციფრებისთვის --------- */
+
+/* ციფრების ზოგადი სტილი */
+.number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-top: 10px; /* დაშორება ცენტრიდან */
+    box-sizing: border-box;
+}
+
+/* თითოეული ციფრის პოზიციონირება მობრუნებით */
+.number-1 { transform: rotate(30deg); }
+.number-2 { transform: rotate(60deg); }
+.number-3 { transform: rotate(90deg); }
+.number-4 { transform: rotate(120deg); }
+.number-5 { transform: rotate(150deg); }
+.number-6 { transform: rotate(180deg); }
+.number-7 { transform: rotate(210deg); }
+.number-8 { transform: rotate(240deg); }
+.number-9 { transform: rotate(270deg); }
+.number-10 { transform: rotate(300deg); }
+.number-11 { transform: rotate(330deg); }
+.number-12 { transform: rotate(360deg); }
+
+
+/* ანიმაცია, რომელიც ისრებს ატრიალებს */
+@keyframes rotate {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
