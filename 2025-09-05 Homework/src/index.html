@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მთავარი - ონლაინ მაღაზია</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-blue-600">Shop.ge</div>
+                
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="index.html" class="nav-link text-blue-600">მთავარი</a></li>
+                    <li><a href="about.html" class="nav-link">ჩვენს შესახებ</a></li>
+                    <li><a href="contact.html" class="nav-link">კონტაქტი</a></li>
+                </ul>
+                
+                <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1">
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="block nav-link text-blue-600 py-2">მთავარი</a></li>
+                    <li><a href="about.html" class="block nav-link py-2">ჩვენს შესახებ</a></li>
+                    <li><a href="contact.html" class="block nav-link py-2">კონტაქტი</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="slider-container relative h-96 overflow-hidden">
+        <div class="slides flex transition-transform duration-500">
+            <div class="slide min-w-full h-96 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="text-4xl font-bold mb-4">მოგესალმებით ჩვენს მაღაზიაში</h1>
+                    <p class="text-xl mb-6">საუკეთესო პროდუქცია საუკეთესო ფასებში</p>
+                    <button class="btn-primary">იხილეთ კატალოგი</button>
+                </div>
+            </div>
+            <div class="slide min-w-full h-96 bg-gradient-to-r from-green-500 to-teal-600 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="text-4xl font-bold mb-4">ახალი კოლექცია</h1>
+                    <p class="text-xl mb-6">50% ფასდაკლება ყველა პროდუქციაზე</p>
+                    <button class="btn-primary">შეიძინე ახლავე</button>
+                </div>
+            </div>
+            <div class="slide min-w-full h-96 bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="text-4xl font-bold mb-4">უფასო მიწოდება</h1>
+                    <p class="text-xl mb-6">100 ლარზე მეტი შეკვეთისთვის</p>
+                    <button class="btn-primary">გაიგე მეტი</button>
+                </div>
+            </div>
+        </div>
+        <button onclick="prevSlide()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-75">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <button onclick="nextSlide()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-75">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <section class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center mb-8">პოპულარული პროდუქცია</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="https://m.media-amazon.com/images/I/61bMJdgeryL._UF1000,1000_QL80_.jpg" alt="iPhone 15 Pro Max" class="w-full h-48 object-contain p-4">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">iPhone 15 Pro Max 256GB</h3>
+                    <p class="text-gray-600 text-sm mb-2">Natural Titanium, A17 Pro ჩიპი</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-sm text-gray-500 line-through">₾4,599</span>
+                            <span class="text-2xl font-bold text-blue-600 block">₾3,999</span>
+                        </div>
+                        <a href="product-detail.html?id=1" class="btn-secondary">დეტალები</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="https://m.media-amazon.com/images/I/51ZqjuoQFWL._AC_SX466_.jpg" alt="MacBook Pro" class="w-full h-48 object-contain p-4">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">MacBook Pro 14" M3</h3>
+                    <p class="text-gray-600 text-sm mb-2">8GB RAM, 512GB SSD, Space Gray</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-sm text-gray-500 line-through">₾6,299</span>
+                            <span class="text-2xl font-bold text-blue-600 block">₾5,499</span>
+                        </div>
+                        <a href="product-detail.html?id=2" class="btn-secondary">დეტალები</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="https://s3.zoommer.ge/site/a895dddc-e90e-4621-854e-02ba579352cf_Thumb.jpeg" alt="iPad Air" class="w-full h-48 object-contain p-4">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">iPad Air 11" M2 128GB</h3>
+                    <p class="text-gray-600 text-sm mb-2">WiFi, Space Gray, 2024</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-sm text-gray-500 line-through">₾2,499</span>
+                            <span class="text-2xl font-bold text-blue-600 block">₾2,199</span>
+                        </div>
+                        <a href="product-detail.html?id=3" class="btn-secondary">დეტალები</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="https://m.media-amazon.com/images/I/71aXGgNCE9L._AC_SX466_.jpg" alt="Apple Watch" class="w-full h-48 object-contain p-4">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">Apple Watch Series 9 45mm</h3>
+                    <p class="text-gray-600 text-sm mb-2">GPS + Cellular, Midnight</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-sm text-gray-500 line-through">₾1,899</span>
+                            <span class="text-2xl font-bold text-blue-600 block">₾1,599</span>
+                        </div>
+                        <a href="product-detail.html?id=4" class="btn-secondary">დეტალები</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="https://m.media-amazon.com/images/I/611pEx7220L._AC_SX522_.jpg" alt="AirPods Pro" class="w-full h-48 object-contain p-4">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">AirPods Pro 2nd Gen</h3>
+                    <p class="text-gray-600 text-sm mb-2">USB-C, MagSafe Case</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-sm text-gray-500 line-through">₾999</span>
+                            <span class="text-2xl font-bold text-blue-600 block">₾849</span>
+                        </div>
+                        <a href="product-detail.html?id=5" class="btn-secondary">დეტალები</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="https://m.media-amazon.com/images/I/71WvUGAhI+L._SX522_.jpg" alt="PlayStation 5" class="w-full h-48 object-contain p-4">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">PlayStation 5 Slim 1TB</h3>
+                    <p class="text-gray-600 text-sm mb-2">Disc Edition + Controller</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-sm text-gray-500 line-through">₾2,299</span>
+                            <span class="text-2xl font-bold text-blue-600 block">₾1,999</span>
+                        </div>
+                        <a href="product-detail.html?id=6" class="btn-secondary">დეტალები</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="https://m.media-amazon.com/images/I/81LOXgmvLeL._AC_SX466_.jpg" alt="Samsung TV" class="w-full h-48 object-contain p-4">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">Samsung QLED 55" 4K TV</h3>
+                    <p class="text-gray-600 text-sm mb-2">Q70C Series, Smart TV 2023</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-sm text-gray-500 line-through">₾3,499</span>
+                            <span class="text-2xl font-bold text-blue-600 block">₾2,799</span>
+                        </div>
+                        <a href="product-detail.html?id=7" class="btn-secondary">დეტალები</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="https://m.media-amazon.com/images/I/61DdUtryrML._UF894,1000_QL80_.jpg" alt="Dyson V15" class="w-full h-48 object-contain p-4">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2">Dyson V15 Detect</h3>
+                    <p class="text-gray-600 text-sm mb-2">Absolute Extra, ლაზერული</p>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-sm text-gray-500 line-through">₾2,999</span>
+                            <span class="text-2xl font-bold text-blue-600 block">₾2,399</span>
+                        </div>
+                        <a href="product-detail.html?id=8" class="btn-secondary">დეტალები</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-12 bg-gray-50">
+        <h2 class="text-3xl font-bold text-center mb-8">ბლოგი და სიახლეები</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=200&fit=crop" alt="ტექნოლოგიები" class="h-48 w-full object-cover">
+                <div class="p-6">
+                    <span class="text-sm text-blue-600 font-semibold">ტექნოლოგიები</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3">iPhone 16 Pro მალე საქართველოში</h3>
+                    <p class="text-gray-600 mb-4">Apple-ის ახალი ფლაგმანი სმარტფონი iPhone 16 Pro უკვე ხელმისაწვდომი იქნება საქართველოში სექტემბრის ბოლოდან. ახალი A18 Pro ჩიპი და გაუმჯობესებული კამერა...</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">2 დღის წინ</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">წაიკითხე მეტი →</a>
+                    </div>
+                </div>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=400&h=200&fit=crop" alt="აქციები" class="h-48 w-full object-cover">
+                <div class="p-6">
+                    <span class="text-sm text-blue-600 font-semibold">აქციები</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3">Black Friday ფასდაკლებები 70%-მდე</h3>
+                    <p class="text-gray-600 mb-4">მხოლოდ ამ კვირაში განსაკუთრებული შეთავაზებები ყველა კატეგორიაში. ლეპტოპები, სმარტფონები, ტელევიზორები და სხვა ტექნიკა რეკორდულად დაბალ ფასებში...</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">5 დღის წინ</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">წაიკითხე მეტი →</a>
+                    </div>
+                </div>
+            </article>
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=200&fit=crop" alt="რჩევები" class="h-48 w-full object-cover">
+                <div class="p-6">
+                    <span class="text-sm text-blue-600 font-semibold">რჩევები</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3">როგორ ავირჩიოთ სწორი ლეპტოპი</h3>
+                    <p class="text-gray-600 mb-4">ლეპტოპის არჩევისას მნიშვნელოვანია გავითვალისწინოთ რამდენიმე ფაქტორი: პროცესორი, ოპერატიული მეხსიერება, ეკრანის ზომა და ბატარეის სიცოცხლე...</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">1 კვირის წინ</span>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">წაიკითხე მეტი →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="text-center mt-8">
+            <button class="btn-primary">ყველა სტატია</button>
+        </div>
+    </section>
+
+    <section class="bg-blue-600 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">გამოიწერე სიახლეები</h2>
+            <p class="mb-6">მიიღე ინფორმაცია აქციებისა და ახალი პროდუქტების შესახებ</p>
+            <div class="max-w-md mx-auto flex gap-2">
+                <input type="email" placeholder="შენი ელ-ფოსტა" class="flex-1 px-4 py-3 rounded-lg text-gray-800">
+                <button class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">გამოწერა</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Shop.ge - ყველა უფლება დაცულია</p>
+        </div>
+    </footer>
+
+    <script src="js/slider.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

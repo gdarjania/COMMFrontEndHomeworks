@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>კონტაქტი - ონლაინ მაღაზია</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-blue-600">Shop.ge</div>
+                
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="index.html" class="nav-link">მთავარი</a></li>
+                    <li><a href="about.html" class="nav-link">ჩვენს შესახებ</a></li>
+                    <li><a href="contact.html" class="nav-link text-blue-600">კონტაქტი</a></li>
+                </ul>
+                
+                <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1">
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="block nav-link py-2">მთავარი</a></li>
+                    <li><a href="about.html" class="block nav-link py-2">ჩვენს შესახებ</a></li>
+                    <li><a href="contact.html" class="block nav-link text-blue-600 py-2">კონტაქტი</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-center mb-8">დაგვიკავშირდით</h1>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold mb-6">გაგზავნეთ შეტყობინება</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">სახელი და გვარი</label>
+                        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="თქვენი სახელი">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">ელ-ფოსტა</label>
+                        <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="your@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">ტელეფონი</label>
+                        <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="+995 555 123 456">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">თემა</label>
+                        <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                            <option>ზოგადი შეკითხვა</option>
+                            <option>შეკვეთის შესახებ</option>
+                            <option>ტექნიკური დახმარება</option>
+                            <option>თანამშრომლობა</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">შეტყობინება</label>
+                        <textarea rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="დაწერეთ თქვენი შეტყობინება..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">გაგზავნა</button>
+                </form>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-bold mb-6">საკონტაქტო ინფორმაცია</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mr-3">📍</div>
+                            <div>
+                                <h3 class="font-semibold">მისამართი</h3>
+                                <p class="text-gray-600">თბილისი, რუსთაველის გამზ. 25</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mr-3">📞</div>
+                            <div>
+                                <h3 class="font-semibold">ტელეფონი</h3>
+                                <p class="text-gray-600">+995 32 2 123 456</p>
+                                <p class="text-gray-600">+995 555 123 456</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mr-3">✉️</div>
+                            <div>
+                                <h3 class="font-semibold">ელ-ფოსტა</h3>
+                                <p class="text-gray-600">info@shop.ge</p>
+                                <p class="text-gray-600">support@shop.ge</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mr-3">🕐</div>
+                            <div>
+                                <h3 class="font-semibold">სამუშაო საათები</h3>
+                                <p class="text-gray-600">ორშ-პარ: 10:00 - 19:00</p>
+                                <p class="text-gray-600">შაბ: 10:00 - 16:00</p>
+                                <p class="text-gray-600">კვი: დასვენება</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-xl font-bold mb-4">სოციალური ქსელები</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-link bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Facebook</a>
+                        <a href="#" class="social-link bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700">Instagram</a>
+                        <a href="#" class="social-link bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-500">Twitter</a>
+                    </div>
+                </div>
+                
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <h3 class="font-semibold mb-2">ხშირად დასმული კითხვები</h3>
+                    <p class="text-gray-700 text-sm">
+                        თუ გაქვთ კითხვები შეკვეთის, მიწოდების ან დაბრუნების შესახებ, 
+                        ეწვიეთ ჩვენს <a href="#" class="text-blue-600 underline">FAQ გვერდს</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-8 mt-8">
+            <h2 class="text-2xl font-bold mb-4">ჩვენი ლოკაცია</h2>
+            <div class="h-96 bg-gray-300 rounded-lg flex items-center justify-center text-gray-600">
+                <p>რუკა იტვირთება...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Shop.ge - ყველა უფლება დაცულია</p>
+        </div>
+    </footer>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

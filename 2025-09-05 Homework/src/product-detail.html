@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>პროდუქტის დეტალები - ონლაინ მაღაზია</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-blue-600">Shop.ge</div>
+                
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="index.html" class="nav-link">მთავარი</a></li>
+                    <li><a href="about.html" class="nav-link">ჩვენს შესახებ</a></li>
+                    <li><a href="contact.html" class="nav-link">კონტაქტი</a></li>
+                </ul>
+                
+                <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1">
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="block nav-link py-2">მთავარი</a></li>
+                    <li><a href="about.html" class="block nav-link py-2">ჩვენს შესახებ</a></li>
+                    <li><a href="contact.html" class="block nav-link py-2">კონტაქტი</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <nav class="text-sm breadcrumbs mb-4">
+            <a href="index.html" class="text-blue-600 hover:underline">მთავარი</a>
+            <span class="mx-2">/</span>
+            <a href="#" class="text-blue-600 hover:underline">სმარტფონები</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-600">iPhone 15 Pro Max</span>
+        </nav>
+        
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <div class="h-96 bg-white rounded-lg flex items-center justify-center">
+                        <img src="https://m.media-amazon.com/images/I/61bMJdgeryL._UF1000,1000_QL80_.jpg" alt="iPhone 15 Pro Max" class="max-h-full object-contain">
+                    </div>
+                    <div class="grid grid-cols-4 gap-2">
+                        <img src="https://m.media-amazon.com/images/I/61XXUxrT1xL._AC_SX679_.jpg" class="h-20 object-contain border rounded cursor-pointer hover:border-blue-500 p-1">
+                        <img src="https://m.media-amazon.com/images/I/61wB+JGRD+L._AC_SX679_.jpg" class="h-20 object-contain border rounded cursor-pointer hover:border-blue-500 p-1">
+                        <img src="https://m.media-amazon.com/images/I/61xFCmuN6PL._AC_SX679_.jpg" class="h-20 object-contain border rounded cursor-pointer hover:border-blue-500 p-1">
+                        <img src="https://m.media-amazon.com/images/I/81Dd5Ym87ML._AC_SX679_.jpg" class="h-20 object-contain border rounded cursor-pointer hover:border-blue-500 p-1">
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <h1 class="text-3xl font-bold">iPhone 15 Pro Max 256GB Natural Titanium</h1>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-yellow-400">★★★★★</span>
+                        <span class="text-gray-600">(342 მიმოხილვა)</span>
+                        <span class="text-sm bg-green-100 text-green-800 px-2 py-1 rounded">ბესტსელერი</span>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-500 line-through text-xl">₾4,599</span>
+                            <span class="bg-red-500 text-white px-2 py-1 rounded text-sm">-13%</span>
+                        </div>
+                        <div class="text-4xl font-bold text-blue-600">₾3,999</div>
+                        <p class="text-sm text-gray-600">ან ₾333 თვეში 12 თვით განვადებით</p>
+                    </div>
+                    
+                    <div class="border-t border-b py-4 space-y-2">
+                        <p class="text-gray-700">
+                            <strong>ბრენდი:</strong> Apple
+                        </p>
+                        <p class="text-gray-700">
+                            <strong>მოდელი:</strong> iPhone 15 Pro Max
+                        </p>
+                        <p class="text-gray-700">
+                            <strong>მდგომარეობა:</strong> <span class="text-green-600">✓ მარაგშია (12 ერთეული)</span>
+                        </p>
+                        <p class="text-gray-700">
+                            <strong>გარანტია:</strong> 12 თვე ოფიციალური
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold mb-3">ფერი:</h3>
+                        <div class="flex gap-2">
+                            <button class="border-2 border-blue-500 rounded-lg px-3 py-2 text-sm">Natural Titanium</button>
+                            <button class="border rounded-lg px-3 py-2 text-sm hover:border-gray-400">Blue Titanium</button>
+                            <button class="border rounded-lg px-3 py-2 text-sm hover:border-gray-400">White Titanium</button>
+                            <button class="border rounded-lg px-3 py-2 text-sm hover:border-gray-400">Black Titanium</button>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold mb-3">მეხსიერება:</h3>
+                        <div class="flex gap-2">
+                            <button class="border rounded-lg px-3 py-2 text-sm hover:border-gray-400">128GB</button>
+                            <button class="border-2 border-blue-500 rounded-lg px-3 py-2 text-sm">256GB</button>
+                            <button class="border rounded-lg px-3 py-2 text-sm hover:border-gray-400">512GB</button>
+                            <button class="border rounded-lg px-3 py-2 text-sm hover:border-gray-400">1TB</button>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold mb-2">აღწერა:</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            iPhone 15 Pro Max წარმოადგენს Apple-ის ფლაგმან სმარტფონს ტიტანის კორპუსით. 
+                            აღჭურვილია უახლესი A17 Pro 3-ნანომეტრიანი ჩიპით, რომელიც უზრუნველყოფს უპრეცედენტო სიმძლავრეს. 
+                            48MP ძირითადი კამერა 5x ოპტიკური ზუმით იძლევა პროფესიონალური ხარისხის ფოტოებს.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <h3 class="font-semibold">მახასიათებლები:</h3>
+                        <ul class="space-y-1 text-gray-600">
+                            <li>• ეკრანი: 6.7" Super Retina XDR OLED, 120Hz ProMotion</li>
+                            <li>• ჩიპსეტი: Apple A17 Pro (3 nm)</li>
+                            <li>• კამერა: 48MP ძირითადი + 12MP ულტრა ფართო + 12MP ტელეფოტო (5x)</li>
+                            <li>• წინა კამერა: 12MP TrueDepth</li>
+                            <li>• ბატარეა: 4422 mAh, სწრაფი დატენვა, MagSafe 15W</li>
+                            <li>• კორპუსი: ტიტანი + Ceramic Shield მინა</li>
+                            <li>• წყალგამძლეობა: IP68</li>
+                            <li>• 5G, WiFi 6E, Bluetooth 5.3, NFC</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="flex items-center border rounded-lg">
+                            <button class="px-3 py-2 hover:bg-gray-100">-</button>
+                            <input type="number" value="1" min="1" class="w-16 text-center border-x py-2">
+                            <button class="px-3 py-2 hover:bg-gray-100">+</button>
+                        </div>
+                        <button class="btn-primary flex-1">კალათაში დამატება</button>
+                        <button class="btn-secondary">♥</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 border-t pt-8">
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4">კომპლექტაცია</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <ul class="space-y-2 text-gray-600">
+                            <li>✓ iPhone 15 Pro Max</li>
+                            <li>✓ USB-C დამტენი კაბელი (1 მეტრი)</li>
+                            <li>✓ დოკუმენტაცია და Apple სტიკერები</li>
+                            <li>✓ SIM ღია ინსტრუმენტი</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h2 class="text-2xl font-bold mb-6">მსგავსი პროდუქცია</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/518bzP8VW1L._AC_UL165_SR165,165_.jpg" class="h-32 w-full object-contain mb-3">
+                        <h4 class="font-semibold text-sm">iPhone 15 Pro 256GB</h4>
+                        <p class="text-gray-500 text-xs">Blue Titanium</p>
+                        <p class="text-blue-600 font-bold">₾3,599</p>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51n-83C8HYL._AC_UL165_SR165,165_.jpg" class="h-32 w-full object-contain mb-3">
+                        <h4 class="font-semibold text-sm">iPhone 14 Pro Max</h4>
+                        <p class="text-gray-500 text-xs">Deep Purple 256GB</p>
+                        <p class="text-blue-600 font-bold">₾3,299</p>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+                        <img src="https://m.media-amazon.com/images/I/71qeTVe5d1L.__AC_SX300_SY300_QL70_FMwebp_.jpg" class="h-32 w-full object-contain mb-3">
+                        <h4 class="font-semibold text-sm">Samsung S24 Ultra</h4>
+                        <p class="text-gray-500 text-xs">256GB Titanium Gray</p>
+                        <p class="text-blue-600 font-bold">₾3,899</p>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+                        <img src="https://m.media-amazon.com/images/I/61OyKi98IuL._AC_UY218_.jpg" class="h-32 w-full object-contain mb-3">
+                        <h4 class="font-semibold text-sm">Google Pixel 8 Pro</h4>
+                        <p class="text-gray-500 text-xs">256GB Obsidian</p>
+                        <p class="text-blue-600 font-bold">₾2,799</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Shop.ge - ყველა უფლება დაცულია</p>
+        </div>
+    </footer>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

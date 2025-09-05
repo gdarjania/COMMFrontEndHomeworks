@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ჩვენს შესახებ - ონლაინ მაღაზია</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-blue-600">Shop.ge</div>
+                
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="index.html" class="nav-link">მთავარი</a></li>
+                    <li><a href="about.html" class="nav-link text-blue-600">ჩვენს შესახებ</a></li>
+                    <li><a href="contact.html" class="nav-link">კონტაქტი</a></li>
+                </ul>
+                
+                <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1">
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="block nav-link py-2">მთავარი</a></li>
+                    <li><a href="about.html" class="block nav-link text-blue-600 py-2">ჩვენს შესახებ</a></li>
+                    <li><a href="contact.html" class="block nav-link py-2">კონტაქტი</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-12">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h1 class="text-4xl font-bold text-center mb-8">ჩვენს შესახებ</h1>
+            
+            <div class="max-w-3xl mx-auto space-y-6 text-gray-700">
+                <p class="text-lg leading-relaxed">
+                    Shop.ge არის საქართველოს წამყვანი ონლაინ მაღაზია, რომელიც 2020 წლიდან ემსახურება ათასობით მომხმარებელს. 
+                    ჩვენი მიზანია მივაწოდოთ მაღალი ხარისხის პროდუქცია საუკეთესო ფასებში.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-blue-600 mb-2">5000+</div>
+                        <p class="text-gray-600">კმაყოფილი მომხმარებელი</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-blue-600 mb-2">1000+</div>
+                        <p class="text-gray-600">პროდუქტი</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+                        <p class="text-gray-600">მხარდაჭერა</p>
+                    </div>
+                </div>
+                
+                <h2 class="text-2xl font-bold mt-8 mb-4">ჩვენი მისია</h2>
+                <p class="leading-relaxed">
+                    ჩვენ ვცდილობთ შევქმნათ საუკეთესო ონლაინ შოპინგის გამოცდილება საქართველოში. 
+                    ყოველდღიურად ვმუშაობთ სერვისის გაუმჯობესებაზე და ახალი პროდუქტების დამატებაზე.
+                </p>
+                
+                <h2 class="text-2xl font-bold mt-8 mb-4">რატომ ჩვენ?</h2>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">✓</span>
+                        <span>ორიგინალური პროდუქცია ოფიციალური გარანტიით</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">✓</span>
+                        <span>სწრაფი და უსაფრთხო მიწოდება მთელი საქართველოს მასშტაბით</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">✓</span>
+                        <span>განვადება პარტნიორი ბანკებით</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">✓</span>
+                        <span>14 დღიანი დაბრუნების გარანტია</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">✓</span>
+                        <span>პროფესიონალური კონსულტაცია</span>
+                    </li>
+                </ul>
+                
+                <div class="bg-blue-50 p-6 rounded-lg mt-8">
+                    <h3 class="text-xl font-semibold mb-3">გუნდი</h3>
+                    <p class="text-gray-700">
+                        ჩვენი გუნდი შედგება 50-ზე მეტი პროფესიონალისგან, რომლებიც ყოველდღიურად ზრუნავენ 
+                        თქვენი შეკვეთების სწრაფ და ხარისხიან მომსახურებაზე.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Shop.ge - ყველა უფლება დაცულია</p>
+        </div>
+    </footer>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>
