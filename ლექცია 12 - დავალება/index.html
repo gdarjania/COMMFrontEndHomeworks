@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./products-style.css" />
+    <title>Fake Store - Products</title>
+  </head>
+  <body>
+    <header>
+      <h1>Fake Store</h1>
+      <div class="search-container">
+        <input type="text" id="search" class="search" placeholder="Search products..." />
+        <select id="category-filter">
+          <option value="">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="jewelery">Jewelry</option>
+          <option value="men's clothing">Men's Clothing</option>
+          <option value="women's clothing">Women's Clothing</option>
+        </select>
+      </div>
+    </header>
+    <div id="loading" class="loading">Loading products...</div>
+    <div id="products-container" class="products-container"></div>
+    <script src="./products.js"></script>
+  </body>
+</html>
