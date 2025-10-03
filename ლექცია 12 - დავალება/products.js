@@ -1,4 +1,7 @@
-const API_URL = 'https://fakestoreapi.com/products';
+import { fetchProducts } from './utils/api.js';
+import { createProductCard, showLoading, showError } from './utils/dom.js';
+import { goToProductDetail } from './utils/navigation.js';
+
 const productsContainer = document.getElementById('products-container');
 const searchInput = document.getElementById('search');
 const categoryFilter = document.getElementById('category-filter');
@@ -6,21 +9,20 @@ const loading = document.getElementById('loading');
 
 let allProducts = [];
 
-async function fetchProducts() {
+async function loadProducts() {
   try {
-    loading.style.display = 'block';
-    const response = await fetch(API_URL);
-    const products = await response.json();
+    showLoading(loading, true);
+    const products = await fetchProducts();
     allProducts = products;
-    displayProducts(products);
-    loading.style.display = 'none';
+    renderProducts(products);
+    showLoading(loading, false);
   } catch (error) {
     console.error('Error fetching products:', error);
-    loading.innerHTML = 'Error loading products. Please try again.';
+    showError(loading, 'Error loading products. Please try again.');
   }
 }
 
-function displayProducts(products) {
+function renderProducts(products) {
   productsContainer.innerHTML = '';
 
   if (products.length === 0) {
@@ -30,32 +32,9 @@ function displayProducts(products) {
 
   products.forEach(product => {
     const productCard = createProductCard(product);
+    productCard.onclick = () => goToProductDetail(product.id);
     productsContainer.appendChild(productCard);
   });
-}
-
-function createProductCard(product) {
-  const productDiv = document.createElement('div');
-  productDiv.className = 'product-card';
-  productDiv.onclick = () => goToProductDetail(product.id);
-
-  productDiv.innerHTML = `
-    <div class="product-image">
-      <img src="${product.image}" alt="${product.title}" />
-    </div>
-    <div class="product-info">
-      <h3 class="product-title">${product.title}</h3>
-      <p class="product-category">${product.category}</p>
-      <p class="product-price">$${product.price}</p>
-      <p class="product-description">${product.description.substring(0, 100)}...</p>
-    </div>
-  `;
-
-  return productDiv;
-}
-
-function goToProductDetail(productId) {
-  window.location.href = `product-detail.html?id=${productId}`;
 }
 
 function filterProducts() {
@@ -77,10 +56,10 @@ function filterProducts() {
     );
   }
 
-  displayProducts(filteredProducts);
+  renderProducts(filteredProducts);
 }
 
 searchInput.addEventListener('input', filterProducts);
 categoryFilter.addEventListener('change', filterProducts);
 
-fetchProducts();
+loadProducts();

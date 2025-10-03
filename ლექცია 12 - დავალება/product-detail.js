@@ -1,81 +1,48 @@
-const API_URL = 'https://fakestoreapi.com/products';
+import { fetchProductById } from './utils/api.js';
+import { displayProductDetail, showLoading, showError } from './utils/dom.js';
+import { getProductIdFromURL, goBack } from './utils/navigation.js';
+
 const productDetailContainer = document.getElementById('product-detail');
 const loading = document.getElementById('loading');
+const backButton = document.getElementById('back-button');
 
-function getProductIdFromURL() {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get('id');
-}
-
-async function fetchProductDetail(productId) {
+async function loadProductDetail(productId) {
   try {
-    loading.style.display = 'block';
-    const response = await fetch(`${API_URL}/${productId}`);
-    const product = await response.json();
-    displayProductDetail(product);
-    loading.style.display = 'none';
+    showLoading(loading, true);
+    const product = await fetchProductById(productId);
+    displayProductDetail(productDetailContainer, product);
+    showLoading(loading, false);
+
+    // Add event listeners after product is displayed
+    const addToCartBtn = document.querySelector('.add-to-cart-btn');
+    const buyNowBtn = document.querySelector('.buy-now-btn');
+
+    if (addToCartBtn) {
+      addToCartBtn.addEventListener('click', () => {
+        alert('Product added to cart!');
+      });
+    }
+
+    if (buyNowBtn) {
+      buyNowBtn.addEventListener('click', () => {
+        alert('Redirecting to checkout...');
+      });
+    }
   } catch (error) {
     console.error('Error fetching product detail:', error);
-    loading.innerHTML = 'Error loading product details. Please try again.';
+    showError(loading, 'Error loading product details. Please try again.');
   }
 }
 
-function displayProductDetail(product) {
-  if (!product || product.error) {
-    productDetailContainer.innerHTML = '<p class="error">Product not found.</p>';
-    return;
-  }
-
-  productDetailContainer.innerHTML = `
-    <div class="product-detail">
-      <div class="product-detail-image">
-        <img src="${product.image}" alt="${product.title}" />
-      </div>
-      <div class="product-detail-info">
-        <h1 class="product-detail-title">${product.title}</h1>
-        <div class="product-detail-category">
-          <span class="category-label">Category:</span>
-          <span class="category-value">${product.category}</span>
-        </div>
-        <div class="product-detail-price">
-          <span class="price">$${product.price}</span>
-        </div>
-        <div class="product-detail-rating">
-          <span class="rating">★ ${product.rating?.rate || 'N/A'}</span>
-          <span class="rating-count">(${product.rating?.count || 0} reviews)</span>
-        </div>
-        <div class="product-detail-description">
-          <h3>Description</h3>
-          <p>${product.description}</p>
-        </div>
-        <div class="product-actions">
-          <button class="add-to-cart-btn">Add to Cart</button>
-          <button class="buy-now-btn">Buy Now</button>
-        </div>
-      </div>
-    </div>
-  `;
-
-  const addToCartBtn = document.querySelector('.add-to-cart-btn');
-  const buyNowBtn = document.querySelector('.buy-now-btn');
-
-  addToCartBtn.addEventListener('click', () => {
-    alert('Product added to cart!');
-  });
-
-  buyNowBtn.addEventListener('click', () => {
-    alert('Redirecting to checkout...');
-  });
-}
-
-function goBack() {
-  window.history.back();
+// Add back button event listener
+if (backButton) {
+  backButton.addEventListener('click', goBack);
 }
 
 const productId = getProductIdFromURL();
 if (productId) {
-  fetchProductDetail(productId);
+  loadProductDetail(productId);
 } else {
   productDetailContainer.innerHTML = '<p class="error">No product ID provided.</p>';
-  loading.style.display = 'none';
+  showLoading(loading, false);
 }
